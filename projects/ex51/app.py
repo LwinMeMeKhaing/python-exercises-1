@@ -4,11 +4,6 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    greeting = "World"
-    return render_template("index.html", greeting=greeting)
-
 @app.route("/hello", methods=['POST', 'GET'])
 def index():
     greeting = "Hello World"
